@@ -9,6 +9,9 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/Shared/Footer/Footer';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Register from './pages/Home/Login/Register/Register';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard/AdminDashboard';
+import Booking from './pages/Booking/Booking';
+
 
 
 function App() {
@@ -26,11 +29,17 @@ function App() {
           <Route path='/allProducts'>
             <AllProducts />
           </Route>
+          <Route exact path="/booking/:singleProductId">
+            <Booking></Booking>
+          </Route>
           <Route path='/login'>
             <Login />
           </Route>
           <Route path='/register'>
             <Register />
+          </Route>
+          <Route path='/adminDashboard'>
+            <AdminDashboard></AdminDashboard>
           </Route>
           <Route path='*'>
             <NotFound />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Spinner } from 'react-bootstrap';
+import { Container, Form, Spinner, Button } from 'react-bootstrap';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import loginBg from '../../../../images/login-bg.jpg';
@@ -91,7 +91,7 @@ const Register = () => {
                                 <NavLink
                                     style={{ textDecoration: "none" }}
                                     to="/login">
-                                    <button className="text-white my-3" variant="link">Already Registered? Please Login</button>
+                                    <Button className="text-white my-3" variant="link">Already Registered? Please Login</Button>
                                 </NavLink>
                             </Form>}
                             {isLoading && <Spinner animation="border" variant="info" />}

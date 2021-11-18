@@ -1,7 +1,7 @@
 .default-btn{
     background-color: #004C97;
     color: white;
-    border: 0;
+    border:1px solid #004C97;
     padding: 10px 25px;
     font-size: 20px;
     font-weight: 500;
@@ -10,4 +10,5 @@
 .default-btn:hover{
     background-color: transparent;
     border:1px solid #004C97;
+    color:#004C97;
 }

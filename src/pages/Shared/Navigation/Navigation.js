@@ -59,7 +59,7 @@ const Navigation = () => {
                             >
                                 All Products
                             </NavLink>
-                            <NavLink
+                            {/* <NavLink
                                 to="/login"
                                 style={{
                                     textDecoration: "none",
@@ -73,7 +73,7 @@ const Navigation = () => {
                                 }}
                             >
                                 login
-                            </NavLink>
+                            </NavLink> */}
                             <NavLink
                                 to="/adminDashboard"
                                 style={{
