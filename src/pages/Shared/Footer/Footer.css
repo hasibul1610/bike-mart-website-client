@@ -1,0 +1,16 @@
+.footer-bg{
+    background-color: #004C97;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer-links ul li{
+    list-style-type: none;
+    color: #dcdcdc;
+    margin-left: -32px;
+}
+.footer-links ul li:hover{
+    color: white;
+}
+.footer-bottom-bg{
+    background-color: #1B2132;
+}
