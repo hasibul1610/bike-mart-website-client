@@ -15,7 +15,7 @@ const Booking = () => {
     const email = user.email;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${singleProductId}`)
+        fetch(`https://fathomless-brushlands-99863.herokuapp.com/singleProduct/${singleProductId}`)
             .then(res => res.json())
             .then(data => setSingleProduct(data))
     }, [])
@@ -35,7 +35,7 @@ const Booking = () => {
         data.price = singleProduct.price;
         data.status = "pending";
 
-        fetch('http://localhost:5000/confirmBooking', {
+        fetch('https://fathomless-brushlands-99863.herokuapp.com/confirmBooking', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

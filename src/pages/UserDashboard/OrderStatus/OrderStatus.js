@@ -11,7 +11,7 @@ const OrderStatus = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${userEmail}`)
+        fetch(`https://fathomless-brushlands-99863.herokuapp.com/myOrders/${userEmail}`)
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, [userEmail]);

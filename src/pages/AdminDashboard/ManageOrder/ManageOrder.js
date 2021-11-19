@@ -13,7 +13,7 @@ const ManageOrder = () => {
     // console.log(status);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://fathomless-brushlands-99863.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -21,7 +21,7 @@ const ManageOrder = () => {
     console.log(orders);
 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://fathomless-brushlands-99863.herokuapp.com/updateStatus/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

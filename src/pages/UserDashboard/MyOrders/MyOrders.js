@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${userEmail}`)
+        fetch(`https://fathomless-brushlands-99863.herokuapp.com/myOrders/${userEmail}`)
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, [control, userEmail]);//control
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are You Sure");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://fathomless-brushlands-99863.herokuapp.com/deleteOrder/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

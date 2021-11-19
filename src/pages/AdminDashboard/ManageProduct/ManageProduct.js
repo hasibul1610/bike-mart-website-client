@@ -6,7 +6,7 @@ const ManageProduct = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("https://fathomless-brushlands-99863.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, [control]);
@@ -15,7 +15,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are Your Sure");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteProduct/${id}`, {
+            fetch(`https://fathomless-brushlands-99863.herokuapp.com/deleteProduct/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())

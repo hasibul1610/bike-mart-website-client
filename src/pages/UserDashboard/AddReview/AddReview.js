@@ -15,7 +15,7 @@ const AddProduct = () => {
 
     const onSubmit = (data) => {
         data.email = userEmail;
-        fetch("http://localhost:5000/addReview", {
+        fetch("https://fathomless-brushlands-99863.herokuapp.com/addReview", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
