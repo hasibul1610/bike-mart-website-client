@@ -8,7 +8,7 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
-    const [isAdmin, setIsAdmin] = useState([]);
+    const [isAdmin, setIsAdmin] = useState(false);
     const [authError, setAuthError] = useState("")
 
     const auth = getAuth();
@@ -101,16 +101,15 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [auth])
 
-    //check admin
     useEffect(() => {
         if (user.email) {
-            fetch(`http://localhost:5000/isAdmin/${user.email}`)
-                .then((res) => res.json())
-                .then((data) => setIsAdmin(data[0]));
+            fetch(`http://localhost:5000/isAdmin?email=${user.email}`)
+                .then(res => res.json())
+                .then(data => setIsAdmin(data))
         }
 
     }, [user.email])
-    // console.log(isAdmin.email);
+    console.log(isAdmin);
 
 
 

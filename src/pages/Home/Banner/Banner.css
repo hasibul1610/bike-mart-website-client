@@ -1,0 +1,17 @@
+.banner-bg{
+    background-color: #fceded;
+    height: 90vh;
+    width: 100%;
+    padding-top: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.banner-details h1{
+    color: #004C97;
+    font-size: 50px;
+}
+.banner-details h3{
+    color: #035eb9;
+    font-size: 40px;
+}
