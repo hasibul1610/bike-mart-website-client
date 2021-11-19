@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Booking = () => {
@@ -93,7 +92,7 @@ const Booking = () => {
                                 className="default-btn m-2"
                             />
                         </form>
-                        <Link to="/userDashboard">Go To Dashboard</Link>
+
                     </div>
                 </div>
             </div>
