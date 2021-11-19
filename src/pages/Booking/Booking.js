@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Booking = () => {
@@ -30,6 +30,7 @@ const Booking = () => {
 
     const onSubmit = (data) => {
         data.email = email;
+        data.name = singleProduct.name;
         data.image = singleProduct.image;
         data.price = singleProduct.price;
         data.status = "pending";
@@ -86,31 +87,13 @@ const Booking = () => {
                             />
                             <br />
 
-
-                            {/* <input
-                                disabled
-                                style={{
-                                    border: 0,
-                                    backgroundColor: 'transparent',
-                                    fontSize: '30px'
-                                }}
-                                {...register("price")}
-                                defaultValue={singleProduct?.price}
-
-                                className="p-2 m-2 w-100"
-                            />
-                            <br /> */}
-
-
-
-                            {errors.exampleRequired && <span>This field is required</span>}
-
                             <input
                                 type="submit"
                                 value="Book Now"
                                 className="default-btn m-2"
                             />
                         </form>
+                        <Link to="/userDashboard">Go To Dashboard</Link>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Register from './pages/Home/Login/Register/Register';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard/AdminDashboard';
 import Booking from './pages/Booking/Booking';
+import UserDashboard from './pages/UserDashboard/UserDashboard/UserDashboard';
 
 
 
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path='/adminDashboard'>
             <AdminDashboard></AdminDashboard>
+          </Route>
+          <Route path='/userDashboard'>
+            <UserDashboard></UserDashboard>
           </Route>
           <Route path='*'>
             <NotFound />

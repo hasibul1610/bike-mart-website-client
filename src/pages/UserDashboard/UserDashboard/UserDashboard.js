@@ -7,12 +7,12 @@ import {
     useRouteMatch,
     NavLink
 } from "react-router-dom";
-import AddProduct from '../AddProduct/AddProduct';
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import ManageOrder from '../ManageOrder/ManageOrder';
-import ManageProduct from '../ManageProduct/ManageProduct';
+import MyOrders from '../MyOrders/MyOrders';
+import Payment from '../Payment/Payment';
+import Review from '../Review/Review';
 
-const AdminDashboard = () => {
+
+const UserDashboard = () => {
     let { path, url } = useRouteMatch();
 
 
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
                         }}
 
                     >
-                        Admin Dashboard
+                        User Dashboard
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
                                         marginBottom: 15
                                     }}
                                     to={`${url}`}
-                                >Add Product
+                                >My Orders
                                 </NavLink>
                                 <NavLink
                                     style={{
@@ -62,7 +62,7 @@ const AdminDashboard = () => {
                                         color: '#004C97',
                                         marginBottom: 15
                                     }}
-                                    to={`${url}/manageProduct`}>Manage Products
+                                    to={`${url}/payment`}>Payment
                                 </NavLink>
                                 <NavLink
                                     style={{
@@ -72,17 +72,7 @@ const AdminDashboard = () => {
                                         color: '#004C97',
                                         marginBottom: 15
                                     }}
-                                    to={`${url}/manageOrder`}>Manage Orders
-                                </NavLink>
-                                <NavLink
-                                    style={{
-                                        textDecoration: 'none',
-                                        fontSize: 20,
-                                        fontWeight: 600,
-                                        color: '#004C97',
-                                        marginBottom: 15
-                                    }}
-                                    to={`${url}/makeAdmin`}>Make Admin
+                                    to={`${url}/review`}>Review
                                 </NavLink>
 
 
@@ -99,20 +89,17 @@ const AdminDashboard = () => {
             </Navbar>
             <Switch>
                 <Route exact path={path}>
-                    <AddProduct></AddProduct>
+                    <MyOrders></MyOrders>
                 </Route>
-                <Route path={`${path}/manageProduct`}>
-                    <ManageProduct></ManageProduct>
+                <Route path={`${path}/payment`}>
+                    <Payment></Payment>
                 </Route>
-                <Route path={`${path}/manageOrder`}>
-                    <ManageOrder></ManageOrder>
-                </Route>
-                <Route path={`${path}/makeAdmin`}>
-                    <MakeAdmin></MakeAdmin>
+                <Route path={`${path}/review`}>
+                    <Review></Review>
                 </Route>
             </Switch>
         </div>
     );
 };
 
-export default AdminDashboard;
+export default UserDashboard;
