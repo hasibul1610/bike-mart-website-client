@@ -59,21 +59,7 @@ const Navigation = () => {
                             >
                                 All Products
                             </NavLink>
-                            {/* <NavLink
-                                to="/login"
-                                style={{
-                                    textDecoration: "none",
-                                    fontSize: "20px",
-                                    marginLeft: "15px",
-                                    color: "#234262"
-                                }}
-                                activeStyle={{
 
-                                    color: "#FF5722"
-                                }}
-                            >
-                                login
-                            </NavLink> */}
                             <NavLink
                                 to="/adminDashboard"
                                 style={{
@@ -87,7 +73,7 @@ const Navigation = () => {
                                     color: "#FF5722"
                                 }}
                             >
-                                Admin
+                                Dashboard
                             </NavLink>
                             {
                                 user.email ?

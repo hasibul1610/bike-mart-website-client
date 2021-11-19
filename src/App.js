@@ -12,6 +12,8 @@ import Register from './pages/Home/Login/Register/Register';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard/AdminDashboard';
 import Booking from './pages/Booking/Booking';
 import UserDashboard from './pages/UserDashboard/UserDashboard/UserDashboard';
+import PrivateRoute from './pages/Home/Login/PrivateRoute/PrivateRoute';
+import AdminRoute from './pages/Home/Login/AdminRoute/AdminRoute';
 
 
 
@@ -30,21 +32,21 @@ function App() {
           <Route path='/allProducts'>
             <AllProducts />
           </Route>
-          <Route exact path="/booking/:singleProductId">
+          <PrivateRoute exact path="/booking/:singleProductId">
             <Booking></Booking>
-          </Route>
+          </PrivateRoute>
           <Route path='/login'>
             <Login />
           </Route>
           <Route path='/register'>
             <Register />
           </Route>
-          <Route path='/adminDashboard'>
+          <AdminRoute path='/adminDashboard'>
             <AdminDashboard></AdminDashboard>
-          </Route>
-          <Route path='/userDashboard'>
+          </AdminRoute>
+          <PrivateRoute path='/userDashboard'>
             <UserDashboard></UserDashboard>
-          </Route>
+          </PrivateRoute>
           <Route path='*'>
             <NotFound />
           </Route>

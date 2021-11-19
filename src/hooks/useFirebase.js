@@ -8,7 +8,7 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
-    // const [isAdmin, setIsAdmin] = useState(false);
+    const [isAdmin, setIsAdmin] = useState([]);
     const [authError, setAuthError] = useState("")
 
     const auth = getAuth();
@@ -82,6 +82,9 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
+
+
+
     //Observe user presence
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -98,16 +101,18 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [auth])
 
-    // //check admin
-    // useEffect(() => {
-    //     if (user.email) {
-    //         fetch(`http://localhost:5000/isAdmin?email=${user.email}`)
-    //             .then(res => res.json())
-    //             .then(data => setIsAdmin(data))
-    //     }
+    //check admin
+    useEffect(() => {
+        if (user.email) {
+            fetch(`http://localhost:5000/isAdmin/${user.email}`)
+                .then((res) => res.json())
+                .then((data) => setIsAdmin(data[0]));
+        }
 
-    // }, [user.email])
-    // console.log(isAdmin);
+    }, [user.email])
+    // console.log(isAdmin.email);
+
+
 
     return {
         user,
@@ -117,7 +122,7 @@ const useFirebase = () => {
         signInUsingGoogle,
         loginUser,
         logOut,
-        // isAdmin
+        isAdmin
     }
 
 }
