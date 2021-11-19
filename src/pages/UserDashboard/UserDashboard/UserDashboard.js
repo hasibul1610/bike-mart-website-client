@@ -8,8 +8,9 @@ import {
     NavLink
 } from "react-router-dom";
 import MyOrders from '../MyOrders/MyOrders';
+import OrderStatus from '../OrderStatus/OrderStatus';
 import Payment from '../Payment/Payment';
-import Review from '../Review/Review';
+import AddReview from '../AddReview/AddReview';
 
 
 const UserDashboard = () => {
@@ -72,7 +73,17 @@ const UserDashboard = () => {
                                         color: '#004C97',
                                         marginBottom: 15
                                     }}
-                                    to={`${url}/review`}>Review
+                                    to={`${url}/orderStatus`}>Order Status
+                                </NavLink>
+                                <NavLink
+                                    style={{
+                                        textDecoration: 'none',
+                                        fontSize: 20,
+                                        fontWeight: 600,
+                                        color: '#004C97',
+                                        marginBottom: 15
+                                    }}
+                                    to={`${url}/addReview`}>Add Review
                                 </NavLink>
 
 
@@ -94,8 +105,11 @@ const UserDashboard = () => {
                 <Route path={`${path}/payment`}>
                     <Payment></Payment>
                 </Route>
-                <Route path={`${path}/review`}>
-                    <Review></Review>
+                <Route path={`${path}/orderStatus`}>
+                    <OrderStatus></OrderStatus>
+                </Route>
+                <Route path={`${path}/addReview`}>
+                    <AddReview></AddReview>
                 </Route>
             </Switch>
         </div>

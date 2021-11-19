@@ -95,8 +95,6 @@ const Register = () => {
                                 </NavLink>
                             </Form>}
                             {isLoading && <Spinner animation="border" variant="info" />}
-                            {user?.email && alert("Registered Successfully")
-                            }
                             {authError && alert({ authError })
                             }
                         </div>

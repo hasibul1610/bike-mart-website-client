@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 
 const ManageOrder = () => {
 
@@ -30,7 +30,7 @@ const ManageOrder = () => {
         })
     }
     return (
-        <div>
+        <Container>
 
             <h1>All Orders : {orders.length}</h1>
             <Table striped bordered hover>
@@ -62,7 +62,7 @@ const ManageOrder = () => {
                     </tbody>
                 ))}
             </Table>
-        </div>
+        </Container>
     );
 };
 
