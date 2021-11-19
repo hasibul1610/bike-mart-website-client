@@ -103,9 +103,11 @@ const useFirebase = () => {
 
     useEffect(() => {
         if (user.email) {
+            setIsLoading(true);
             fetch(`http://localhost:5000/isAdmin?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setIsAdmin(data))
+                .finally(() => setIsLoading(false));
         }
 
     }, [user.email])
