@@ -39,17 +39,38 @@ const AddProduct = () => {
                 <div>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
+                        <label>Enter Your Name</label>
+                        <br />
                         <input
+                            required
                             {...register("name")}
                             placeholder="Name"
-                            className="p-2 m-2 w-100"
+                            className="p-2 m-2 w-50"
+
                         />
                         <br />
+                        <label>Select a Rating Stars</label>
+                        <br />
+                        <select
+                            required
+                            {...register("stars")}
+                            className="p-2 m-2 w-50">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
 
+                        </select>
+                        <br />
+                        <label>Write Your Review</label>
+                        <br />
                         <textarea
+                            required
                             {...register("review")}
                             placeholder="review"
-                            className="p-2 m-2 w-100"
+                            className="p-2 m-2 w-50"
                         />
                         <br />
 

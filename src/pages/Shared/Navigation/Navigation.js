@@ -60,25 +60,28 @@ const Navigation = () => {
                                 All Products
                             </NavLink>
 
-                            <NavLink
-                                to="/adminDashboard"
-                                style={{
-                                    textDecoration: "none",
-                                    fontSize: "20px",
-                                    marginLeft: "15px",
-                                    color: "#234262"
-                                }}
-                                activeStyle={{
 
-                                    color: "#FF5722"
-                                }}
-                            >
-                                Dashboard
-                            </NavLink>
                             {
                                 user.email ?
+                                    <div>
 
-                                    <Link to="/home"><button className="btn btn-outline-primary mx-3" onClick={logOut}>Logout</button></Link>
+                                        <NavLink
+                                            to="/adminDashboard"
+                                            style={{
+                                                textDecoration: "none",
+                                                fontSize: "20px",
+                                                marginLeft: "15px",
+                                                color: "#234262"
+                                            }}
+                                            activeStyle={{
+
+                                                color: "#FF5722"
+                                            }}
+                                        >
+                                            Dashboard
+                                        </NavLink>
+                                        <Link to="/home"><button className="btn btn-outline-primary mx-3" onClick={logOut}>Logout</button></Link>
+                                    </div>
                                     : <NavLink
                                         to="/login"
                                         style={{
