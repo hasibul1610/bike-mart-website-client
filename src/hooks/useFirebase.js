@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithPopup, updateProfile, getIdToken } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithPopup, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../pages/Home/Login/Firebase/firebase.init";
 
@@ -91,8 +91,7 @@ const useFirebase = () => {
             if (user) {
 
                 setUser(user)
-                // getIdToken(user)
-                //     .then(idToken => localStorage.setItem('idToken', idToken))
+
             } else {
                 setUser({})
             }
@@ -101,6 +100,8 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [auth])
 
+
+    //Checking the admin email
     useEffect(() => {
         if (user.email) {
             setIsLoading(true);

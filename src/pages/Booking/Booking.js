@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Booking = () => {
@@ -56,7 +56,7 @@ const Booking = () => {
     return (
         <Container>
 
-            <h1 className="text-center my-5 pt-5">Booking</h1>
+            <h1 className="text-center my-5 pt-5">Confirm Your Order</h1>
             <div className="booking-container">
                 <div className="row container">
                     <div className="col-md-6">

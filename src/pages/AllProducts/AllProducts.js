@@ -29,7 +29,7 @@ const AllProducts = () => {
                                         <h5 className="my-2 text-warning">Starts From ${pd.price}</h5>
 
                                         <Link to={`/booking/${pd?._id}`}>
-                                            <button className="default-btn">See Details & Add to Cart</button>
+                                            <button className="default-btn">Order Now</button>
                                         </Link>
                                     </Card.Body>
                                 </Card>

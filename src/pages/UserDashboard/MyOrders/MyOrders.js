@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const MyOrders = () => {
@@ -36,7 +35,7 @@ const MyOrders = () => {
     return (
         <div className="container my-5 py-5">
 
-            <h2>Booking By Email : {userEmail}</h2>
+            <h2>Ordered from Email : {userEmail}</h2>
 
             <div className="services mt-5">
                 <div className="row container">

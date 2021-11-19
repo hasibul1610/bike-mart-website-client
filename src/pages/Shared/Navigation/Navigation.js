@@ -57,7 +57,7 @@ const Navigation = () => {
                                     color: "#FF5722"
                                 }}
                             >
-                                All Products
+                                All Bikes
                             </NavLink>
 
 
