@@ -10,7 +10,7 @@ const Banner = () => {
             <Container>
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="banner-img">
+                        <div className="banner-img d-none d-md-block">
                             <img className="img-fluid" src={bannerBike} alt="" />
                         </div>
                     </div>
