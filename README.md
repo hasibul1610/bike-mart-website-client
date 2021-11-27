@@ -19,7 +19,7 @@ https://bike-mart-d38d6.web.app/
 ## Little Demostration
 
 * User can see some bikes on the homepage and Organization Review and can see all bikes from all bikes menu without login 
-* If user want to book any item then he/she need to login
+* If user want to book any item then he/she need to login to the website
 * If User is new He/She can register himself or sign with Google
 * After Booking, he/she can see the ordered list, Pending Status on the dashboard as well as he/she can write review from the dashboard menu 
 * Admin can add other admin 
